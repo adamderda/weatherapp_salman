@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Angular\weather-forecast\src\app\helpers\" />
+    <Folder Include="Angular\weather-forecast\src\app\components\" />
+    <Folder Include="Angular\weather-forecast\src\app\sharedservices\" />
+    <Folder Include="Angular\weather-forecast\src\app\services\" />
+  </ItemGroup>
+
+</Project>
