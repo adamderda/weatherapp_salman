@@ -1,0 +1,52 @@
+<h1>Weather forecast</h1>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <b>Weather Forecast</b>
+      </div>
+      <div class="col-xs-12">
+        <div class="row" *ngFor="let weather of weatherForecast">
+          <div class="col-xs-6 col-md-5 col-lg-4">
+            <div class="input-group">
+              <input type="text"
+                     class="form-control"
+                     value="{{ weather.name }}"
+                     (click)="#weatherText.select()"
+                     #weatherText />
+            </div>
+          </div>
+          <div class="col-xs-2" *ngIf="isEditAllowed">
+            <button id="searchWeather" type="button" class="go-delete-button" (click)="GetWeatherForecastForCity(weather.Name, weather.metric)">
+              <i></i> Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class='table' *ngIf="weatherForecast">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>dt</th>
+      <th>Rain</th>
+      <th>Snow</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{id}}</td>
+      <td>{{name}}</td>
+      <td>{{dt}}</td>
+      <td>{{rain}}</td>
+      <td>{{snow}}</td>
+      <td>{{message}}</td>
+    </tr>
+  </tbody>
+</table>
